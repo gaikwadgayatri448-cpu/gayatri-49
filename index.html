@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Home — Gayatri Gaikwad</title>
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Lottie player (web component) -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="section container">
+      <div class="home-grid">
+        <div class="home-left">
+          <h1 class="h-title">Hi, I’m <span style="color: #00f5d4">Gayatri Gaikwad</span></h1>
+          <p class="h-sub">I am a dedicated student and an aspiring developer who loves exploring technology, creativity, and problem-solving.</p>
+
+          <p style="color:var(--muted)">I enjoy learning new skills, building projects, and improving myself every day.</p>
+
+          <div style="margin-top:16px" class="row">
+            <a class="skill-pill" href="education.html">Education</a>
+            <a class="skill-pill" href="skills.html">Skills</a>
+            <a class="skill-pill" href="projects.html" style="display:none">Projects</a>
+          </div>
+        </div>
+
+        <div class="home-right">
+          <!-- Avatar circle -->
+          <div style="display:flex;flex-direction:column;align-items:center;gap:12px">
+            <div class="avatar"><img src="images/gayatri.jpg" alt="Gayatri"></div>
+
+
+        <!-- FUTURISTIC ROBOT using Lottie -->
+        <lottie-player
+          src="https://assets10.lottiefiles.com/packages/lf20_jcikwtux.json"
+          background="transparent"
+          speed="1"
+          style="width:220px; height:220px;"
+          loop
+          autoplay>
+        </lottie-player>
+
+        <!-- Two static robot images (side-by-side on wide screens, stacked on mobile) -->
+        <div class="robot-grid" style="width:100%;max-width:420px;">
+          <img class="robot-img" src="images/robot1.jpg" alt="Futuristic Robot 1">
+          <img class="robot-img" src="images/robot2.jpg" alt="Futuristic Robot 2">
+        </div>
+
+        <div style="color:var(--muted);font-size:13px">Futuristic Robots — Custom Images</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</body>
+</html>
+

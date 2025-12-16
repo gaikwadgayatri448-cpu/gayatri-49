@@ -1,0 +1,118 @@
+/* style.css — Teal / Aqua Gradient Theme (applies to all pages) */
+:root{
+  --bg1: #006d77;
+  --bg2: #00b4d8;
+  --card: rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.04);
+  --muted: #cfeff6;
+  --accent: #00f5d4;
+  --max-width: 1100px;
+  --radius: 12px;
+  --nav-height: 64px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#042028;}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:var(--max-width);margin:0 auto;padding:20px;}
+
+/* NAV */
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:var(--nav-height);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  box-shadow: 0 6px 20px rgba(2,8,10,0.25);
+  z-index:999;
+}
+nav a{color:var(--muted);font-weight:600;padding:10px 12px;border-radius:8px}
+nav a:hover{background:var(--glass);color:#001219}
+
+/* SECTION LAYOUT */
+main{padding-top:calc(var(--nav-height) + 28px);padding-bottom:60px}
+.section{
+  max-width:var(--max-width);
+  margin:28px auto;
+  padding:22px;
+  border-radius:var(--radius);
+  background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+/* HOME */
+.home-grid{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.home-left{flex:1;min-width:260px}
+.home-right{width:340px;max-width:40%;min-width:200px;display:flex;align-items:center;justify-content:center}
+
+/* avatar */
+.avatar{
+  width:220px;height:220px;border-radius:50%;overflow:hidden;border:6px solid rgba(255,255,255,0.06);
+  box-shadow: 0 12px 30px rgba(2,12,14,0.6);
+}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* section titles */
+.h-title{font-size:22px;margin:0 0 8px}
+.h-sub{color:var(--muted);margin:0 0 14px}
+
+/* education cards */
+.edu-list{display:grid;gap:14px}
+.edu-card{display:flex;gap:16px;align-items:flex-start;padding:14px;border-radius:10px;background:var(--glass)}
+.edu-card img{width:160px;height:110px;object-fit:cover;border-radius:8px}
+
+/* skills list */
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.skill-pill{background:rgba(255,255,255,0.02);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+
+/* ROBOT PAGE STYLING */
+.robot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:start}
+.robot-card{
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.03);
+  border-radius:var(--radius);
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.robot-card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 12px 35px rgba(0,0,0,0.35);
+}
+.robot-card img{
+  width:180px;
+  height:180px;
+  object-fit:contain;
+  border-radius:12px;
+  margin-bottom:12px;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2));
+  padding:6px;
+}
+.robot-card h3{margin:0 0 6px;color:var(--accent)}
+.robot-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.4}
+
+/* small responsive */
+@media (max-width:900px){
+  .home-right{width:48%}
+  .edu-card{flex-direction:column;align-items:center;text-align:center}
+  .edu-card img{width:100%;height:160px}
+  .robot-card img{width:140px;height:140px}
+}
+@media (max-width:520px){
+  nav{gap:8px;padding:10px;overflow:auto}
+  .home-right{width:100%}
+  .avatar{width:160px;height:160px}
+  .section{margin:14px;padding:16px}
+  .robot-card img{width:120px;height:120px}
+}
